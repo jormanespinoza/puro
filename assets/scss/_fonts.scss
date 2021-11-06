@@ -1,0 +1,19 @@
+$fonts: ((Branding-Bold, Branding-Bold, normal, normal), ());
+
+@each $fontName, $fontFileName, $fontStyle, $fontWeight in $fonts {
+    @if $fontName {
+        @font-face {
+            font-family: '#{$fontName}';
+            src: url('../fonts/#{$fontName}.eot');
+            src: url('../fonts/#{$fontFileName}.eot?#iefix') format('embedded-opentype'),
+                url('../fonts/#{$fontFileName}.otf') format('otf'),
+                url('../fonts/#{$fontFileName}.ttf') format('truetype'),
+                url('../fonts/#{$fontFileName}.svg##{$fontFileName}') format('svg'),
+                url('../fonts/#{$fontFileName}.woff') format('woff'),
+                url('../fonts/#{$fontFileName}.woff2') format('woff2');
+            font-style: #{$fontStyle};
+            font-weight: #{$fontWeight};
+            text-rendering: optimizeLegibility;
+        }
+    }
+}

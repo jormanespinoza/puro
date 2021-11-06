@@ -1,0 +1,85 @@
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #111 url('../images/template/puro_background.jpg') center center no-repeat;
+    background-size: cover;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        background: rgba(0, 0, 0, 0.095);
+        z-index: 1;
+    }
+
+    main#puro {
+        color: #fff;
+        position: relative;
+        padding-top: 40px;
+        z-index: 2;
+        width: 100%;
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            h1 {
+                visibility: hidden;
+                height: 0;
+                margin: 0;
+            }
+
+            img {
+                width: 225px;
+            }
+        }
+
+        section#intro {
+            p {
+                font-family: 'Branding-Bold';
+                font-size: 1.5rem;
+                text-align: center;
+                line-height: 1.5;
+            }
+        }
+
+        section#products {
+            margin: 40px auto;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                text-decoration: none;
+
+                &:first-of-type {
+                    margin-right: 5px;
+                }
+
+                svg {
+                    width: 44px;
+
+                    path {
+                        transition: fill 0.45s ease-out;
+                    }
+
+                    &:hover {
+                        path {
+                            fill: #6682a4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
