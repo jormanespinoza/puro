@@ -2,6 +2,7 @@ body {
     width: 100%;
     height: 100%;
     min-height: 100vh;
+    position: relative;
     background: #111 url('../images/template/puro_background.jpg') center center no-repeat;
     background-size: cover;
 
@@ -13,16 +14,18 @@ body {
         width: 100%;
         height: 100%;
         min-height: 100vh;
-        background: rgba(0, 0, 0, 0.095);
+        background: rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
 
     main#puro {
-        color: #fff;
-        position: relative;
-        padding-top: 40px;
-        z-index: 2;
         width: 100%;
+        max-width: 720px;
+        position: relative;
+        padding: 60px 0;
+        margin: 0 auto;
+        z-index: 2;
+        color: #fff;
 
         header {
             display: flex;
@@ -37,21 +40,93 @@ body {
             }
 
             img {
-                width: 225px;
+                width: 300px;
+                margin-bottom: 60px;
+
+                @include mobile {
+                    width: 180px;
+                    margin-bottom: 30px;
+                }
             }
         }
 
         section#intro {
             p {
                 font-family: 'Branding-Bold';
-                font-size: 1.5rem;
+                font-size: 2rem;
                 text-align: center;
                 line-height: 1.5;
+
+                &:first-of-type {
+                    margin-bottom: 60px;
+
+                    @include mobile {
+                        margin-bottom: 30px;
+                    }
+                }
+
+                @include mobile {
+                    font-size: 1.2rem;
+                }
             }
         }
 
         section#products {
-            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            margin: 60px auto;
+
+            @include mobile {
+                margin: 30px auto;
+            }
+
+            .product {
+                display: flex;
+                align-items: center;
+                margin: 0 auto 30px;
+
+                &:nth-of-type(odd) {
+                    img {
+                        margin-left: -8px;
+                    }
+                }
+
+                &:nth-of-type(even) {
+                    flex-direction: row-reverse;
+
+                    img {
+                        margin-right: -8px;
+                    }
+                }
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                p {
+                    width: 254px;
+                    padding: 10px 5px;
+                    border: 2px solid #fff;
+                    font-family: 'Branding-Bold';
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    text-align: center;
+
+                    @include mobile {
+                        width: 165px;
+                        padding: 6px 3px;
+                        font-size: 0.8rem;
+                    }
+                }
+
+                img {
+                    width: 200px;
+
+                    @include mobile {
+                        max-width: 145px;
+                    }
+                }
+            }
         }
 
         footer {
@@ -64,6 +139,10 @@ body {
 
                 &:first-of-type {
                     margin-right: 5px;
+
+                    @include mobile {
+                        margin-right: 10px;
+                    }
                 }
 
                 svg {
@@ -77,6 +156,10 @@ body {
                         path {
                             fill: #6682a4;
                         }
+                    }
+
+                    @include mobile {
+                        width: 34px;
                     }
                 }
             }
