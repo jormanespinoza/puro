@@ -13,7 +13,7 @@
     z-index: 9999;
     transition: 0.5s ease-in-out;
 
-    &.hide {
+    &.hidden {
         opacity: 0;
 
         svg {
