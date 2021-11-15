@@ -15,6 +15,7 @@
 
     &.hidden {
         opacity: 0;
+        display: none;
 
         svg {
             display: none;
