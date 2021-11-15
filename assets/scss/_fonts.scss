@@ -1,4 +1,4 @@
-$fonts: ((Branding-Bold, Branding-Bold, normal, normal), ());
+$fonts: ((Branding-Bold, Branding-Bold, normal, normal), (Branding-SemiBold, Branding-SemiBold, normal, normal));
 
 @each $fontName, $fontFileName, $fontStyle, $fontWeight in $fonts {
     @if $fontName {
